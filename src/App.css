@@ -12,7 +12,7 @@ body {
 .App-Header {
     margin-top: 2rem;
     min-height: 80px;
-    font-size: 30px;
+    font-size: 34px;
     text-shadow: 1px 1px 0px #36b4ae;
 }
 
@@ -22,9 +22,12 @@ body {
     margin-left: 30%;
     display: flex;
     color: rgb(202, 202, 202);
-    border-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
     align-items: center;
     flex-direction: column;
+    box-shadow: 0px 10px 13px -7px #00000070,
+        10px -1px 9px 8px rgba(0, 0, 0, 0.02);
 }
 
 h4 {
@@ -47,14 +50,13 @@ h4 {
     padding-right: 0.5rem;
     padding-left: 0.5rem;
     color: #3a3a3a;
-    outline: 0em;
-    box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.24);
+    box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.425);
     font-size: 14px;
 }
 
 .Search-Button {
     background-color: #61384d;
-    height: 35px;
+    height: 36px;
     border-bottom-right-radius: 0.175rem;
     border-top-right-radius: 0.175rem;
     font-weight: bold;
@@ -62,10 +64,13 @@ h4 {
     padding-right: 2rem;
     border: 2px transparent #61384d;
     font-size: 15px;
+    box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.137);
+    box-sizing: border-box;
 }
 
 .Search-Button:hover {
     background-color: #74415b;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
 }
 
 input[type='text']:focus {
@@ -88,4 +93,12 @@ button[type='text']:hover {
     margin-left: 30%;
     border-radius: 0.5rem;
     height: 100%;
+    display: grid; /* Se muestra como una grilla... */
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0.75rem;
+    padding: 1.25rem;
+    justify-items: center;
+    align-content: center;
+    box-shadow: 0px 10px 13px -7px #00000018,
+        10px -1px 9px 8px rgba(0, 0, 0, 0.03);
 }
