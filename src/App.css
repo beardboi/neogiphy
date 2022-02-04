@@ -1,38 +1,91 @@
-.App {
-  text-align: center;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    background-color: #282c34;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App-Header {
+    margin-top: 2rem;
+    min-height: 80px;
+    font-size: 30px;
+    text-shadow: 1px 1px 0px #36b4ae;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App-Header-Container {
+    background-color: #202020;
+    margin-right: 30%;
+    margin-left: 30%;
+    display: flex;
+    color: rgb(202, 202, 202);
+    border-radius: 0.5rem;
+    align-items: center;
+    flex-direction: column;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+h4 {
+    font-size: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.Input-Container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 110px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Search-Input {
+    width: 60%;
+    height: 35px;
+    border-bottom-left-radius: 0.175rem;
+    border-top-left-radius: 0.175rem;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    color: #3a3a3a;
+    outline: 0em;
+    box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.24);
+    font-size: 14px;
+}
+
+.Search-Button {
+    background-color: #61384d;
+    height: 35px;
+    border-bottom-right-radius: 0.175rem;
+    border-top-right-radius: 0.175rem;
+    font-weight: bold;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border: 2px transparent #61384d;
+    font-size: 15px;
+}
+
+.Search-Button:hover {
+    background-color: #74415b;
+}
+
+input[type='text']:focus {
+    box-shadow: 0 0 5pt 2pt #61384d;
+    outline-width: 0px;
+}
+
+input[type='text']:hover {
+    box-shadow: 0 0 5pt 0.5pt #61384d;
+}
+
+button[type='text']:hover {
+    box-shadow: 0 0 5pt 0.5pt #61384d;
+}
+
+.App-Content {
+    margin-top: 2rem;
+    background-color: #202020;
+    margin-right: 30%;
+    margin-left: 30%;
+    border-radius: 0.5rem;
+    height: 100%;
 }
