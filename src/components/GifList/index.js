@@ -19,9 +19,6 @@ export default function GifList({ params }) {
     // The gifs array and the function that allows to set it.
     const [gifs, setGifs] = useState([]);
 
-    // The limit of gifs amount allowed.
-    const limit = 25;
-
     // Get the parameter keyword.
     const { keyword } = params;
 
@@ -30,8 +27,12 @@ export default function GifList({ params }) {
     */
     useEffect(
         function () {
+            setLoading(true);
+
             // Get the gifs array and then set the gifs.
-            getGifs(keyword, limit).then((gifs) => setGifs(gifs));
+            getGifs({ keyword: keyword })
+                .then((gifs) => setGifs(gifs));
+
             // Make the loader disappear.
             setLoading(false);
         },
@@ -49,6 +50,9 @@ export default function GifList({ params }) {
 
     // Finally, return a Gif component for every gifs in the array.
     return gifs.map(({ id, title, url }) => (
-        <Gif key={id} id={id} title={title} url={url} />
+        <Gif key={id} 
+             id={id} 
+             title={title} 
+             url={url} />
     ));
 }

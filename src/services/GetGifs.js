@@ -1,12 +1,14 @@
-export default function getGifs(keyword, limit) {
+export default function getGifs({ keyword, limit = 50 }) {
     // Define the URL of the API request.
-    let BASE_URL = `https://api.giphy.com/v1/gifs/search?
-        api_key=${process.env.REACT_APP_API_KEY}
-        &limit=${limit}
-        &q=${keyword}`;
+    let baseURL = `${process.env.REACT_APP_API_URL}`;
+
+    // The final URL.
+    let apiURL =
+        baseURL +
+        `${process.env.REACT_APP_API_KEY}&limit=${limit}&q=${keyword}`;
 
     // Return the promise.
-    return fetch(BASE_URL)
+    return fetch(apiURL)
         .then((res) => res.json())
         .then((response) => {
             // Get the data.
@@ -20,6 +22,8 @@ export default function getGifs(keyword, limit) {
                     const { url } = images.downsized_medium;
                     return { title, id, url };
                 });
+                console.log(gifs)
+
                 return gifs;
             }
         });

@@ -11,9 +11,15 @@ body {
 
 .App-Header {
     margin-top: 2rem;
+    padding-top: 0.75rem;
     min-height: 80px;
-    font-size: 34px;
-    text-shadow: 1px 1px 0px #36b4ae;
+    font-size: 40px;
+    text-shadow: 1px 1px 1px #36b4ae, -1px 2px 0px #a3457f;
+    border-radius: 4px;
+    border: 1px solid rgba(238, 238, 238, 0.425);
+    background-color: rgba(0, 0, 0, 0.151);
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .App-Header-Container {
@@ -30,26 +36,39 @@ body {
         10px -1px 9px 8px rgba(0, 0, 0, 0.02);
 }
 
+.Sub-Title-Container {
+    margin-top: 1.75rem;
+}
+
 h4 {
     font-size: 20px;
 }
-
-.Input-Container {
-    width: 100%;
+/* Container for SearchResult Component */
+.Search-Container {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 110px;
+    width: 100%;
+    padding: 1.75rem;
 }
 
+/* The container that wraps the search input  */
+.Input-Container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 1.75rem;
+}
+
+/* The search input */
 .Search-Input {
-    width: 60%;
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+    width: 80%;
     height: 35px;
-    border-bottom-left-radius: 0.175rem;
-    border-top-left-radius: 0.175rem;
+    border-radius: 0.175rem;
     padding-right: 0.5rem;
-    padding-left: 0.5rem;
     color: #3a3a3a;
+    padding-left: 0.5rem;
     box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.425);
     font-size: 14px;
 }
@@ -57,13 +76,12 @@ h4 {
 .Search-Button {
     background-color: #61384d;
     height: 36px;
-    border-bottom-right-radius: 0.175rem;
-    border-top-right-radius: 0.175rem;
-    font-weight: bold;
+    border-radius: 0.175rem;
     padding-left: 2rem;
     padding-right: 2rem;
     border: 2px transparent #61384d;
     font-size: 15px;
+    font-weight: bold;
     box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.137);
     box-sizing: border-box;
 }
@@ -71,6 +89,11 @@ h4 {
 .Search-Button:hover {
     background-color: #74415b;
     box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
+}
+
+.Input-Container > form > i {
+    font-size: 15px;
+    color: #777;
 }
 
 input[type='text']:focus {
@@ -101,4 +124,10 @@ button[type='text']:hover {
     align-content: center;
     box-shadow: 0px 10px 13px -7px #00000018,
         10px -1px 9px 8px rgba(0, 0, 0, 0.03);
+}
+
+.Neons h1 {
+    -webkit-animation: glow 2s ease-in-out infinite alternate;
+    -moz-animation: glow 2s ease-in-out infinite alternate;
+    animation: glow 2s ease-in-out infinite alternate;
 }

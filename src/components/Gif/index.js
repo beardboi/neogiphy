@@ -7,8 +7,6 @@ import React from 'react';
  * @returns A single Gif component.
  */
 export default function Gif(gif) {
-    console.log(gif);
-
     // Destructuring the gif into some variables.
     const { title, url } = gif;
 
