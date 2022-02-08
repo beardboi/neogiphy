@@ -5,7 +5,6 @@ import SearchResults from './pages/Search';
 
 /**
  * The principal component of the App.
- *
  * @returns The App mounted.
  */
 function App() {
@@ -14,10 +13,10 @@ function App() {
             {/* APP HEADER */}
             <Route component={Home} path="/" />
             <Route component={Home} path="/search/:keyword" />
+            
             {/* MAIN CONTENT  */}
             <Route component={SearchResults} path="/search/:keyword" />
         </>
     );
 }
-
 export default App;

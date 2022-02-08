@@ -22,6 +22,14 @@ export default function GifList({ params }) {
     // Get the parameter keyword.
     const { keyword } = params;
 
+    function wait(ms){
+        var start = new Date().getTime();
+        var end = start;
+        while(end < start + ms) {
+          end = new Date().getTime();
+       }
+     }
+
     /* Every time that the component is render, calls
        an API from GIPHY specifying the new keyword.
     */
@@ -30,8 +38,9 @@ export default function GifList({ params }) {
             setLoading(true);
 
             // Get the gifs array and then set the gifs.
-            getGifs({ keyword: keyword })
-                .then((gifs) => setGifs(gifs));
+            getGifs({ keyword: keyword }).then((gifs) => setGifs(gifs));
+
+            wait(2000)
 
             // Make the loader disappear.
             setLoading(false);
@@ -50,9 +59,6 @@ export default function GifList({ params }) {
 
     // Finally, return a Gif component for every gifs in the array.
     return gifs.map(({ id, title, url }) => (
-        <Gif key={id} 
-             id={id} 
-             title={title} 
-             url={url} />
+        <Gif key={id} id={id} title={title} url={url} />
     ));
 }

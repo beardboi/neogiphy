@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Import Fonts  */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&display=swap');
+
 html,
 body {
     height: 100%;
@@ -9,17 +12,27 @@ body {
     background-color: #282c34;
 }
 
+.Logo {
+    height: 70px;
+    margin-right: 2rem;
+}
+
 .App-Header {
+    align-items: center;
     margin-top: 2rem;
-    padding-top: 0.75rem;
+    margin-bottom: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     min-height: 80px;
-    font-size: 40px;
-    text-shadow: 1px 1px 1px #36b4ae, -1px 2px 0px #a3457f;
+    font-size: 42px;
+    font-weight: 500;
+    color: rgba(211, 211, 211, 0.788);
+    text-shadow: 1px 1px 4px #27726e, -2px 2px 0px #a3457f;
     border-radius: 4px;
-    border: 1px solid rgba(238, 238, 238, 0.425);
+    border: 1px solid rgba(48, 48, 48, 0.425);
     background-color: rgba(0, 0, 0, 0.151);
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 34px;
+    padding-right: 34px;
 }
 
 .App-Header-Container {
@@ -34,15 +47,14 @@ body {
     flex-direction: column;
     box-shadow: 0px 10px 13px -7px #00000070,
         10px -1px 9px 8px rgba(0, 0, 0, 0.02);
+    font-family: 'Fira Code', monospace;
+    font-weight: 400;
 }
 
 .Sub-Title-Container {
-    margin-top: 1.75rem;
+    font-family: 'Fira Code', monospace;
 }
 
-h4 {
-    font-size: 20px;
-}
 /* Container for SearchResult Component */
 .Search-Container {
     display: flex;
@@ -52,15 +64,19 @@ h4 {
 
 /* The container that wraps the search input  */
 .Input-Container {
+    background-color: rgba(0, 0, 0, 0.096);
+    border-radius: 0.5rem;
     display: flex;
     width: 100%;
     align-items: center;
     justify-content: center;
     padding: 1.75rem;
+    font-family: 'Fira Code', monospace;
 }
 
 /* The search input */
 .Search-Input {
+    background-color: rgba(37, 37, 37, 0.555);
     margin-left: 0.75rem;
     margin-right: 0.75rem;
     width: 80%;
@@ -69,40 +85,38 @@ h4 {
     padding-right: 0.5rem;
     color: #3a3a3a;
     padding-left: 0.5rem;
-    box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.425);
-    font-size: 14px;
+    font-size: 12px;
+    font-weight: 800;
+    color: #dadada;
 }
 
 .Search-Button {
-    background-color: #61384d;
-    height: 36px;
+    background-color: #a3457fc4;
     border-radius: 0.175rem;
+    font-size: 14px;
+    font-weight: 900;
+    height: 36px;
     padding-left: 2rem;
     padding-right: 2rem;
-    border: 2px transparent #61384d;
-    font-size: 15px;
-    font-weight: bold;
-    box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.137);
-    box-sizing: border-box;
 }
 
 .Search-Button:hover {
-    background-color: #74415b;
-    box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
+    background-color: #97456f;
 }
 
 .Input-Container > form > i {
     font-size: 15px;
-    color: #777;
+    color: rgb(224, 0, 0);
 }
 
 input[type='text']:focus {
-    box-shadow: 0 0 5pt 2pt #61384d;
+    box-shadow: 0 0 2pt 0.5pt #353535;
     outline-width: 0px;
 }
 
 input[type='text']:hover {
-    box-shadow: 0 0 5pt 0.5pt #61384d;
+    box-shadow: 0 0 2pt 0.5pt #3f3e3e;
+    outline-width: 0px;
 }
 
 button[type='text']:hover {
@@ -124,10 +138,4 @@ button[type='text']:hover {
     align-content: center;
     box-shadow: 0px 10px 13px -7px #00000018,
         10px -1px 9px 8px rgba(0, 0, 0, 0.03);
-}
-
-.Neons h1 {
-    -webkit-animation: glow 2s ease-in-out infinite alternate;
-    -moz-animation: glow 2s ease-in-out infinite alternate;
-    animation: glow 2s ease-in-out infinite alternate;
 }
