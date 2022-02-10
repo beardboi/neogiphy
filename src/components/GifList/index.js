@@ -1,6 +1,7 @@
-import './GifList.css';
+import './styles.css';
 import getGifs from '../../services/GetGifs';
 import Gif from '../Gif';
+import Loader from '../Loader';
 import React, { useEffect, useState } from 'react';
 
 /**
@@ -22,40 +23,23 @@ export default function GifList({ params }) {
     // Get the parameter keyword.
     const { keyword } = params;
 
-    function wait(ms){
-        var start = new Date().getTime();
-        var end = start;
-        while(end < start + ms) {
-          end = new Date().getTime();
-       }
-     }
-
     /* Every time that the component is render, calls
        an API from GIPHY specifying the new keyword.
     */
     useEffect(
         function () {
-            setLoading(true);
-
+            console.log(`The current value of loading is ${loading}`);
             // Get the gifs array and then set the gifs.
-            getGifs({ keyword: keyword }).then((gifs) => setGifs(gifs));
-
-            wait(2000)
-
-            // Make the loader disappear.
-            setLoading(false);
+            getGifs({ keyword: keyword }).then((gifs) => {
+                setGifs(gifs);
+                setLoading(false);
+            });
         },
         [keyword] // Keyword is a dependecy value.
     );
 
     // If the gifs are being setting, show the loader.
-    if (loading) {
-        return (
-            <div className="Loader-Container">
-                <div className="Loader" />
-            </div>
-        );
-    }
+    if (loading) return <Loader />;
 
     // Finally, return a Gif component for every gifs in the array.
     return gifs.map(({ id, title, url }) => (

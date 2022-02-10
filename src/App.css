@@ -37,8 +37,8 @@ body {
 
 .App-Header-Container {
     background-color: #202020;
-    margin-right: 30%;
-    margin-left: 30%;
+    margin-right: 25%;
+    margin-left: 25%;
     display: flex;
     color: rgb(202, 202, 202);
     border-bottom-left-radius: 0.5rem;
@@ -123,19 +123,3 @@ button[type='text']:hover {
     box-shadow: 0 0 5pt 0.5pt #61384d;
 }
 
-.App-Content {
-    margin-top: 2rem;
-    background-color: #202020;
-    margin-right: 30%;
-    margin-left: 30%;
-    border-radius: 0.5rem;
-    height: 100%;
-    display: grid; /* Se muestra como una grilla... */
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 0.75rem;
-    padding: 1.25rem;
-    justify-items: center;
-    align-content: center;
-    box-shadow: 0px 10px 13px -7px #00000018,
-        10px -1px 9px 8px rgba(0, 0, 0, 0.03);
-}

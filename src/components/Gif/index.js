@@ -1,5 +1,6 @@
-import './Gif.css';
+import './styles.css';
 import React from 'react';
+import { Link } from 'wouter';
 
 /**
  * This component reprensents a single gif.
@@ -8,21 +9,14 @@ import React from 'react';
  */
 export default function Gif(gif) {
     // Destructuring the gif into some variables.
-    const { title, url } = gif;
+    const { title, url, id } = gif;
 
     return (
         <div className="Gif-Container">
-            {/* <div className="Gif-Title">
+            <Link to={`/gif/${id}`} className="Gif-Link">
                 <h4>{title}</h4>
-            </div> */}
-            <div className="Gif-Image">
-                <a href={url}>
-                    <img alt={title} src={url} />
-                </a>
-            </div>
-            {/* <div class>
-                <small>{id}</small>
-            </div> */}
+                <img alt={title} src={url} />
+            </Link>
         </div>
     );
 }

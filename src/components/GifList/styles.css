@@ -1,0 +1,41 @@
+:root {
+    --gridList-column: 280px;
+    --gridList-rows: 250px;
+    --gridList-gap: 6px;
+}
+
+/* The gifs displayed */
+.App-Content {
+    display: grid;
+    margin-top: 2rem;
+    background-color: #202020;
+    margin-right: 25%;
+    margin-left: 25%;
+    border-radius: 0.5rem;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(280px, 1fr)
+    );    
+    grid-auto-rows: var(--gridList-rows);
+    grid-template-rows: masonry;
+    grid-auto-flow: row;
+    gap: 0.75rem;
+    padding: 1.25rem;
+    align-content: center;
+    box-shadow: 0px 10px 13px -7px #00000018,
+        10px -1px 9px 8px rgba(0, 0, 0, 0.03);
+}
+
+@media screen and (min-width: 37.5rem) {
+    :root {
+        --gridList-column: 180px;
+        --gridList-rows: 200px;
+    }
+}
+
+@media screen and (min-width: 60rem) {
+    :root {
+        --gridList-column: 300px;
+        --gridList-rows: 210px;
+    }
+}
