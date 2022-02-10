@@ -16,7 +16,7 @@ function App() {
             <Route component={Home} path="/search/:keyword" />
             <Route component={Home} path="/gif/:id" />
 
-            {/* MAIN CONTENT  */}
+            {/* APP CONTENT  */}
             <Route component={SearchResults} path="/search/:keyword" />
             <Route component={Details} path="/gif/:id" />
         </>

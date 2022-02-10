@@ -1,6 +1,8 @@
+import { API_URL } from "../config/const";
+
 export default async function getGifs({ keyword, limit = 50 }) {
     // Define the URL of the API request.
-    let baseURL = `${process.env.REACT_APP_API_URL}`;
+    let baseURL = API_URL;
 
     // The final URL.
     let apiURL =
@@ -12,10 +14,7 @@ export default async function getGifs({ keyword, limit = 50 }) {
 
     // Get the data.
     const response = await res.json();
-
     const { data } = response;
-
-    console.log(data);
 
     // Validation: data needs to be an array (that contains the gifs).
     if (Array.isArray(data)) {
@@ -29,7 +28,7 @@ export default async function getGifs({ keyword, limit = 50 }) {
             return { title, id, url }; 
         });
 
-        return gifs;
+        return gifs; // Finally, return the gifs.
     }
 
     return [] // Default return value

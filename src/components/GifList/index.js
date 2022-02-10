@@ -7,8 +7,8 @@ import Gif from '../Gif';
  * keyword it makes a call to an API from GIPHY and then
  * return a rendered component with all the gifs.
  *
- * @param {*} params The parameters passed by the props
- * @returns An componente with the Gifs objects rendered.
+ * @param {*} gifs The gifs passed by the father component.
+ * @returns The GifList component.
  */
 export default function GifList({ gifs }) {
     // Finally, return a Gif component for every gifs in the array.

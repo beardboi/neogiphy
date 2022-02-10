@@ -4,7 +4,8 @@ import { useGifs } from '../../hooks/useGifs';
 
 /**
  * Contains the list of gifst that are made being received.
- * @param {*} params
+ * @param {*} params The params passed by the father component. 
+ * It contains the keyword needed to search the gifs.
  * @returns The search results component.
  */
 export default function SearchResults({ params }) {

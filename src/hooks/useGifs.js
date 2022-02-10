@@ -1,6 +1,11 @@
 import { useState, useEffect } from "react";
 import getGifs from '../services/GetGifs';
 
+/**
+ * The custom hook to manage the state of the Search component
+ * @param {*} keyword The object that contains the keyword param.
+ * @returns The state of the variables loading and gifs. 
+ */
 export function useGifs({ keyword }) {
     // The state of the loader by default is true.
     const [loading, setLoading] = useState(true);
@@ -17,7 +22,7 @@ export function useGifs({ keyword }) {
             // Get the gifs array and then set the gifs.
             getGifs({ keyword: keyword }).then((gifs) => {
                 setGifs(gifs);
-                setLoading(true);
+                setLoading(false);
             });
         },
         [keyword] // Keyword is a dependecy value.
