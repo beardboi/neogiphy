@@ -1,6 +1,6 @@
 .Loader {
-    border: 5px solid rgb(184, 184, 184); /* Light grey */
-    border-top: 5px solid #a3457f; /* Blue */
+    border: 5px solid rgb(184, 184, 184);
+    border-top: 5px solid #a3457f;
     border-radius: 50%;
     width: 80px;
     height: 80px;
@@ -8,9 +8,12 @@
 }
 
 .Loader-Container {
-    background-color: rgba(107, 107, 107, 0);
-    grid-column: 2;
+    margin-left: 25%;
+    margin-right: 25%;
+    height: 20vh;
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 @keyframes spin {

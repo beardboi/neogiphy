@@ -27,7 +27,6 @@ export default function Home() {
      */
     const handleSubmit = (event) => {
         event.preventDefault();
-        console.log(path);
         pushLocation(`/search/${keyword}`);
     };
 
