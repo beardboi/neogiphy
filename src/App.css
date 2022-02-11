@@ -24,9 +24,9 @@ body {
     padding-top: 1rem;
     padding-bottom: 1rem;
     min-height: 80px;
-    font-size: 42px;
+    font-size: 40px;
     font-weight: 500;
-    color: rgba(211, 211, 211, 0.788);
+    color: rgba(252, 252, 252, 0.788);
     text-shadow: 1px 1px 4px #27726e, -2px 2px 0px #a3457f;
     border-radius: 4px;
     border: 1px solid rgba(48, 48, 48, 0.425);
@@ -53,73 +53,9 @@ body {
 
 .Sub-Title-Container {
     font-family: 'Fira Code', monospace;
-}
-
-/* Container for SearchResult Component */
-.Search-Container {
-    display: flex;
-    width: 100%;
-    padding: 1.75rem;
-}
-
-/* The container that wraps the search input  */
-.Input-Container {
-    background-color: rgba(0, 0, 0, 0.096);
-    border-radius: 0.5rem;
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    padding: 1.75rem;
-    font-family: 'Fira Code', monospace;
-}
-
-/* The search input */
-.Search-Input {
-    background-color: rgba(37, 37, 37, 0.555);
-    margin-left: 0.75rem;
-    margin-right: 0.75rem;
-    width: 80%;
-    height: 35px;
-    border-radius: 0.175rem;
-    padding-right: 0.5rem;
-    color: #3a3a3a;
-    padding-left: 0.5rem;
-    font-size: 12px;
-    font-weight: 800;
-    color: #dadada;
-}
-
-.Search-Button {
-    background-color: #a3457fc4;
-    border-radius: 0.175rem;
     font-size: 14px;
-    font-weight: 900;
-    height: 36px;
-    padding-left: 2rem;
-    padding-right: 2rem;
 }
 
-.Search-Button:hover {
-    background-color: #97456f;
+.App-Title {
+    font-size: 14px;
 }
-
-.Input-Container > form > i {
-    font-size: 15px;
-    color: rgb(224, 0, 0);
-}
-
-input[type='text']:focus {
-    box-shadow: 0 0 2pt 0.5pt #353535;
-    outline-width: 0px;
-}
-
-input[type='text']:hover {
-    box-shadow: 0 0 2pt 0.5pt #3f3e3e;
-    outline-width: 0px;
-}
-
-button[type='text']:hover {
-    box-shadow: 0 0 5pt 0.5pt #61384d;
-}
-

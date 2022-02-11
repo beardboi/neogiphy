@@ -9,5 +9,7 @@ export default function Details({ params }) {
 
     const { id } = params;
 
-    return <div className="App-Content"></div>;
+    return <div className="App-Content">
+        
+    </div>;
 }

@@ -1,24 +1,19 @@
-import { useState } from 'react/cjs/react.development';
-import { useLocation } from 'wouter';
-import logo from './../../images/logo.png';
+import { useState } from 'react/cjs/react.development'
+import { useLocation } from 'wouter'
+import logo from './../../images/logo.png'
+import './styles.css'
+import { description, headerTitle, searchText } from '../../config/const'
 
 /**
- * The main component of the web page. It contains the web header 
+ * The main component of the web page. It contains the web header
  * and the search input.
  * @returns The Home component.
  */
 export default function Home() {
-    // Some style to the formula 😎.
-    const emoji = '💻';
-    const headerTitle = 'DANK GIPHY';
-    const description = `A simple gif searcher write on React ${emoji}`;
-    const searchText = 'Search a gif by some keyword...';
-
     // Allows to manage the user web navigation.
-    const [path, pushLocation] = useLocation();
-
+    const [path, pushLocation] = useLocation()
     // Handles the gifs keyword state.
-    const [keyword, setKeyword] = useState('');
+    const [keyword, setKeyword] = useState('')
 
     /**
      * The function allows to to manage the user web navigation.
@@ -26,9 +21,9 @@ export default function Home() {
      * @param {*} event The click event.
      */
     const handleSubmit = (event) => {
-        event.preventDefault();
-        pushLocation(`/search/${keyword}`);
-    };
+        event.preventDefault()
+        pushLocation(`/search/${keyword}`)
+    }
 
     /**
      * This function handles changes made by the user to the search input.
@@ -36,11 +31,12 @@ export default function Home() {
      */
     const handleInput = (event) => {
         // Change the keyword by the text input value of the textbox.
-        setKeyword(event.target.value);
-    };
+        setKeyword(event.target.value)
+    }
 
     return (
         <>
+            {/* App Header */}
             <div className="App-Header-Container">
                 <a href="/">
                     <div className="App-Header Neons flex flex-row shadow-sm">
@@ -49,8 +45,9 @@ export default function Home() {
                     </div>
                 </a>
                 <div className="Sub-Title-Container">
-                    <h4>{description}</h4>
+                    <h3>{description}</h3>
                 </div>
+                {/* App Form */}
                 <div className="Search-Container">
                     <form onSubmit={handleSubmit} className="Input-Container">
                         <i className="fas fa-search" />
@@ -61,12 +58,10 @@ export default function Home() {
                             value={keyword}
                             onChange={handleInput}
                         />
-                        <button type="submit" className="Search-Button">
-                            Search
-                        </button>
+                        <button className="Search-Button">Search</button>
                     </form>
                 </div>
             </div>
         </>
-    );
+    )
 }
