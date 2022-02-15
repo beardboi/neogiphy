@@ -1,9 +1,9 @@
-import './App.css';
-import { Route } from 'wouter';
-import Home from './pages/Home';
-import SearchResults from './pages/Search';
-import Details from './pages/Details';
-import LastSearch from './components/LastSearch';
+import './App.css'
+import { Route } from 'wouter'
+import AppHeader from './components/AppHeader'
+import SearchResults from './pages/Search'
+import Details from './pages/Details'
+import LastSearch from './components/LastSearch'
 
 /**
  * The principal component. It contains all the routes from the app.
@@ -13,13 +13,16 @@ function App() {
     return (
         <>
             {/* APP HEADER */}
-            <Route component={Home} path="/" />
-            <Route component={Home} path="/search/:keyword" />
-            <Route component={LastSearch} path="/" />
+            <div className="App-Header-Container">
+                <AppHeader />
+            </div>
             {/* APP CONTENT  */}
-            <Route component={SearchResults} path="/search/:keyword" />
-            <Route component={Details} path="/gif/:id" />
+            <div className="App-Content">
+                <Route component={LastSearch} path="/" />
+                <Route component={SearchResults} path="/search/:keyword" />
+                <Route component={Details} path="/gif/:id" />
+            </div>
         </>
-    );
+    )
 }
-export default App;
+export default App

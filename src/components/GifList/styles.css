@@ -1,19 +1,17 @@
 :root {
-    --gridList-column: 280px;
-    --gridList-rows: 250px;
+    --gridList-column: 200px;
+    --gridList-rows: 200px;
     --gridList-gap: 6px;
 }
 
 /* The gifs displayed */
-.App-Content {
+.Gifs-Container {
     display: grid;
     background-color: #202020;
-    margin-right: 25%;
-    margin-left: 25%;
     border-radius: 0.5rem;
     grid-template-columns: repeat(
         auto-fit,
-        minmax(280px, 1fr)
+        minmax(200px, 1fr)
     );    
     gap: 0.75rem;
     padding: 1.25rem;

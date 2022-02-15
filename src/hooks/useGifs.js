@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import getGifs from '../services/GetGifs'
+import { getLastKeyword } from '../utils/getLastKeyword'
 
 /**
  * The custom hook to manage the state of the Search component
@@ -7,7 +8,7 @@ import getGifs from '../services/GetGifs'
  * @returns The state of the variables loading and gifs.
  */
 export function useGifs({ keyword } = { keyword: null }) {
-    // The state of the loader by default is true.
+    // The state of the loader by default is false.
     const [loading, setLoading] = useState(false)
 
     // The gifs array and the function that allows to set it.
@@ -21,9 +22,7 @@ export function useGifs({ keyword } = { keyword: null }) {
             setLoading(true)
 
             // Check if there is a keyword on the localStorage.
-            const keywordToUse = keyword
-                ? keyword
-                : localStorage.getItem('lastKeyword')
+            const keywordToUse = getLastKeyword(keyword)
 
             // Get the gifs array and then set the gifs.
             getGifs({ keyword: keywordToUse }).then((gifs) => {
@@ -32,9 +31,9 @@ export function useGifs({ keyword } = { keyword: null }) {
                 localStorage.setItem('lastKeyword', keywordToUse)
             })
         },
-        [keyword] // Keyword is a dependecy value.
+        [keyword] // Keyword is a dependecy value. // eslint-disable-line react-hooks/exhaustive-deps
     )
 
     // Return the states.
-    return { loading, gifs, keyword }
+    return { loading, gifs }
 }

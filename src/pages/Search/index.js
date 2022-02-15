@@ -15,7 +15,7 @@ export default function SearchResults({ params }) {
     // Using custom hook.
     const { loading, gifs } = useGifs({ keyword })
 
-    // Decode the string in the url to a normal string. 
+    // Decode the string in the url to a normal string.
     const keywordDecoded = decodeURI(keyword)
 
     /* If the gifs are being setting, show the loader. 
@@ -26,12 +26,10 @@ export default function SearchResults({ params }) {
                 <Loader />
             ) : (
                 <>
-                    <div className="App-Content-Title">
-                        <h2 className="App-Title text-white">
-                            Your search results for "{keywordDecoded}"
-                        </h2>
-                    </div>
-                    <div className="App-Content">
+                    <h2 className="App-Title text-white justify-center">
+                        Your search results for "{keywordDecoded}"
+                    </h2>
+                    <div className="Gifs-Container">
                         <GifList gifs={gifs} />
                     </div>
                 </>
