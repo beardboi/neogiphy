@@ -26,9 +26,12 @@ body {
     display: flex;
     justify-content: center;
     font-family: 'Fira Code';
+    text-align: center;
 }
 
-.Sub-Title-Container {
-    font-family: 'Fira Code', monospace;
-    font-size: 14px;
+@media screen and (max-width: 768px) {
+    .App-Content {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
 }

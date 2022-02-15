@@ -4,6 +4,7 @@ import AppHeader from './components/AppHeader'
 import SearchResults from './pages/Search'
 import Details from './pages/Details'
 import LastSearch from './components/LastSearch'
+import { GifsContextProvider } from './context/GifsContext'
 
 /**
  * The principal component. It contains all the routes from the app.
@@ -18,9 +19,11 @@ function App() {
             </div>
             {/* APP CONTENT  */}
             <div className="App-Content">
-                <Route component={LastSearch} path="/" />
-                <Route component={SearchResults} path="/search/:keyword" />
-                <Route component={Details} path="/gif/:id" />
+                <GifsContextProvider>
+                    <Route component={LastSearch} path="/" />
+                    <Route component={SearchResults} path="/search/:keyword" />
+                    <Route component={Details} path="/gif/:id" />
+                </GifsContextProvider>
             </div>
         </>
     )

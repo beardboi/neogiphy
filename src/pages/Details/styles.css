@@ -1,3 +1,11 @@
 .Gif-Detail-Container {
-    
+    display: flex;
+    margin-top: 2rem;
+    padding: 2rem;
+    min-height: 200px;
+    justify-content: center;
+}
+
+.Gif-Details {
+    height: 100px;
 }

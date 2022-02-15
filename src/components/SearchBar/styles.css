@@ -65,3 +65,25 @@ input[type='text']:hover {
 button[type='text']:hover {
     box-shadow: 0 0 5pt 0.5pt #61384d;
 }
+
+@media screen and (max-width: 768px) {
+    .Search-Button {
+        width: 80px;
+        font-size: 12px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .Search-Input {
+        font-size: 10px;
+    }
+
+    .Search-Container {
+        display: flex;
+        width: 100%;
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+        padding-top: 1.2rem;
+        padding-bottom: 0.75rem;
+    }
+}

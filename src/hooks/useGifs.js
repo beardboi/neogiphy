@@ -1,6 +1,7 @@
-import { useState, useEffect } from 'react'
-import getGifs from '../services/GetGifs'
+import { useState, useEffect, useContext } from 'react'
+import getGifs from '../services/getGifs'
 import { getLastKeyword } from '../utils/getLastKeyword'
+import GifsContext from '../context/GifsContext'
 
 /**
  * The custom hook to manage the state of the Search component
@@ -12,7 +13,7 @@ export function useGifs({ keyword } = { keyword: null }) {
     const [loading, setLoading] = useState(false)
 
     // The gifs array and the function that allows to set it.
-    const [gifs, setGifs] = useState([])
+    const {gifs, setGifs} = useContext(GifsContext)
 
     /* Every time that the component is render, calls
        an API from GIPHY specifying the new keyword.*/
@@ -31,7 +32,7 @@ export function useGifs({ keyword } = { keyword: null }) {
                 localStorage.setItem('lastKeyword', keywordToUse)
             })
         },
-        [keyword] // Keyword is a dependecy value. // eslint-disable-line react-hooks/exhaustive-deps
+        [keyword, setGifs] // Keyword is a dependecy value. // eslint-disable-line react-hooks/exhaustive-deps
     )
 
     // Return the states.
