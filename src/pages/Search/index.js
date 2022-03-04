@@ -1,6 +1,6 @@
-import GifList from '../../components/GifList'
-import Loader from '../../components/Loader'
-import { useGifs } from '../../hooks/useGifs'
+import GifList from 'components/GifList'
+import Loader from 'components/Loader'
+import { useGifs } from 'hooks/useGifs'
 
 /**
  * Contains the list of gifst that are made being received.

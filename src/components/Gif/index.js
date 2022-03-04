@@ -12,9 +12,9 @@ export default function Gif(gif) {
     const { title, url, id } = gif;
 
     return (
-        <div className="Gif-Container">
+        <div className="Gif">
             <Link to={`/gif/${id}`} className="Gif-Link">
-                <h4>{title}</h4>
+                { title.length === 0 ? '' : <h4>{title}</h4> }
                 <img loading='lazy' alt={title} src={url} />
             </Link>
         </div>

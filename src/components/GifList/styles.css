@@ -1,35 +1,16 @@
-:root {
-    --gridList-column: 200px;
-    --gridList-rows: 200px;
-    --gridList-gap: 6px;
-}
-
 /* The gifs displayed */
 .Gifs-Container {
-    display: grid;
-    background-color: #202020;
-    border-radius: 0.5rem;
-    grid-template-columns: repeat(
-        auto-fit,
-        minmax(200px, 1fr)
-    );    
-    gap: 0.75rem;
-    padding: 1.25rem;
-    align-content: center;
-    box-shadow: 0px 10px 13px -7px #00000018,
-        10px -1px 9px 8px rgba(0, 0, 0, 0.03);
+    display: -webkit-box; /* Not needed if autoprefixing */
+    display: -ms-flexbox; /* Not needed if autoprefixing */
+    display: flex;
+    width: auto;
+    gap: 0.5rem;
 }
 
-@media screen and (min-width: 37.5rem) {
-    :root {
-        --gridList-column: 180px;
-        --gridList-rows: 200px;
-    }
+.Gifs-Container_Column {
+    background-clip: padding-box;
 }
 
-@media screen and (min-width: 60rem) {
-    :root {
-        --gridList-column: 300px;
-        --gridList-rows: 210px;
-    }
+.Gifs-Container_Column > .Gif {
+    margin-bottom: 0.5em;
 }

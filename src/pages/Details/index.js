@@ -1,6 +1,6 @@
 import { useContext } from 'react'
-import Context from '../../context/GifsContext'
-import Gif from '../../components/Gif'
+import Context from 'context/GifsContext'
+import Gif from 'components/Gif'
 import './styles.css'
 
 /**

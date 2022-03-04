@@ -1,10 +1,10 @@
 import './App.css'
 import { Route } from 'wouter'
-import AppHeader from './components/AppHeader'
-import SearchResults from './pages/Search'
-import Details from './pages/Details'
-import LastSearch from './components/LastSearch'
-import { GifsContextProvider } from './context/GifsContext'
+import AppHeader from 'components/AppHeader'
+import SearchResults from 'pages/Search'
+import Details from 'pages/Details'
+import LastSearch from 'components/LastSearch'
+import { GifsContextProvider } from 'context/GifsContext'
 
 /**
  * The principal component. It contains all the routes from the app.

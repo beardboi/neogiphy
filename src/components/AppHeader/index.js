@@ -1,9 +1,8 @@
-import { useState } from 'react/cjs/react.development'
-import { useLocation } from 'wouter'
-import logo from './../../images/logo.png'
 import './styles.css'
-import { description, headerTitle, searchText } from '../../config/const'
-import SearchBar from '../SearchBar'
+import { useLocation } from 'wouter'
+import { useState } from 'react/cjs/react.development'
+import logo from '.'
+import SearchBar from 'components/SearchBar'
 
 /**
  * The main component of the web page. It contains the web header
@@ -11,6 +10,12 @@ import SearchBar from '../SearchBar'
  * @returns The Home component.
  */
 export default function AppHeader() {
+    // Add some style to the formula.
+    const emojis = '💻😎👌'
+    const headerTitle = 'dank giphy'
+    const description = `A simple gif searcher write on React ${emojis}`
+    const searchText = 'Search a gif by some keyword...'
+
     // Allows to manage the user web navigation.
     const pushLocation = useLocation()[1]
 

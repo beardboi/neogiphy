@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Domine:wght@400;500;600;700&display=swap');
+
 .App-Content-Title h2 {
     font-family: 'Fira Code';
     font-weight: 600;
@@ -5,7 +7,7 @@
 
 .Logo {
     height: 70px;
-    margin-right: 0.5rem;
+    margin-right: 1rem;
 }
 
 .App-Header {
@@ -17,12 +19,13 @@
     padding-left: 0.4rem;
     padding-right: 0.4rem;
     min-height: 80px;
-    font-size: 40px;
-    font-weight: 300;
-    color: rgba(252, 252, 252, 0.788);
+    font-size: 65px;
+    color: rgba(252, 252, 252, 0.952);
     text-shadow: 1px 4px 4px #27726e, -2px 2px 0px #a3457f;
     border-radius: 30%;
     @apply flex flex-row;
+    font-family: 'Amatic SC', cursive;
+    font-weight: 600;
 }
 
 .App-Header-Container {
@@ -37,8 +40,6 @@
     flex-direction: column;
     box-shadow: 0px 10px 13px -7px #00000070,
         10px -1px 9px 8px rgba(0, 0, 0, 0.02);
-    font-family: 'Fira Code', monospace;
-    font-weight: 400;
 }
 
 .Sub-Title-Container {

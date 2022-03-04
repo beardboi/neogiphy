@@ -1,7 +1,7 @@
 import Loader from '../Loader'
-import { useGifs } from '../../hooks/useGifs'
+import { useGifs } from 'hooks/useGifs'
 import GifList from '../GifList'
-import { getLastKeyword } from '../../utils/getLastKeyword'
+import { getLastKeyword } from 'utils/getLastKeyword'
 
 /**
  * The component that shows the last search made by the user.
