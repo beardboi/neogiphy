@@ -15,17 +15,16 @@ function App() {
     return (
         <>
             {/* APP HEADER */}
-            <div className="App-Header-Container">
                 <AppHeader />
-            </div>
+
             {/* APP CONTENT  */}
             <div className="App-Content">
+                <Trendings />
                 <GifsContextProvider>
                     <Route component={LastSearch} path="/" />
                     <Route component={SearchResults} path="/search/:keyword" />
                     <Route component={Details} path="/gif/:id" />
                 </GifsContextProvider>
-                <Trendings/>
             </div>
         </>
     )

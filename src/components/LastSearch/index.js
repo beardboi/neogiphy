@@ -5,7 +5,7 @@ import { getLastKeyword } from 'utils/getLastKeyword'
 
 /**
  * The component that shows the last search made by the user.
- * @returns The LastSearchComponent. 
+ * @returns The LastSearchComponent.
  */
 export default function LastSearch() {
     // Using the custom hook... get the loading state and the gifs array.
@@ -17,13 +17,13 @@ export default function LastSearch() {
     if (loading) return <Loader />
 
     return (
-        <>
-            <h2 className="App-Title text-white">
-                Your last search results was for "{keyword}"
+        <div>
+            <h2 className="App-Title">
+                Your last search results was for "{keyword}:"
             </h2>
             <div className="Gifs-Container">
-                <GifList gifs={gifs}></GifList>
+                <GifList gifs={gifs} />
             </div>
-        </>
+        </div>
     )
 }

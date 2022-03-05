@@ -26,9 +26,9 @@ export default function SearchResults({ params }) {
                 <Loader />
             ) : (
                 <>
-                    <h2 className="App-Title text-white justify-center">
-                        Your search results for "{keywordDecoded}"
-                    </h2>
+                    <h4 className="App-Title text-white justify-center">
+                        Your search results for "{keywordDecoded}:"
+                    </h4>
                     <div className="Gifs-Container">
                         <GifList gifs={gifs} />
                     </div>

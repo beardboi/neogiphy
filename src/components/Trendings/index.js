@@ -19,12 +19,12 @@ export default function Trendings() {
 
     return (
         <div className="Trendings-Container">
-            <div>
-                <h2 className="text-white font-bold">TRENDINGS</h2>
+            <div className='Trending-Title'>
+                <h2>TRENDINGS</h2>
             </div>
             <div className="Trendings">
                 {trends.map((trend) => {
-                    return <Trending trending={trend} />
+                    return <Trending key={trend} trending={trend} />
                 })}
             </div>
         </div>

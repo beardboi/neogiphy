@@ -1,3 +1,18 @@
 .Trendings {
     @apply flex flex-wrap justify-between;
+    color: rgb(228, 228, 228);
+}
+
+.Trendings-Container {
+    
+}
+
+.Trending-Title {
+    display: flex;
+    justify-content: center;
+}
+
+.Trending-Title h2 {
+    @apply font-bold;
+    color: rgb(228, 228, 228);
 }

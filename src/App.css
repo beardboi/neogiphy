@@ -19,6 +19,8 @@ body {
 }
 
 .App-Content {
+    /* display: grid;
+    grid-template-columns: 4fr 1fr; */
     margin-left: 25%;
     margin-right: 25%;
 }
@@ -33,6 +35,7 @@ body {
     justify-content: center;
     font-family: 'Fira Code';
     text-align: center;
+    @apply text-white;
 }
 
 @media screen and (max-width: 768px) {

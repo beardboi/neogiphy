@@ -1,7 +1,7 @@
 import { API_BASE_URL } from './config'
 
 // TODO: Later, make a function reusable
-export default async function getGifs({ keyword, limit = 50 }) {
+export default async function getGifs({ keyword, limit = 25 }) {
     const baseURL = API_BASE_URL // Get the base URL.
     const resource = 'gifs'
     const action = 'search'

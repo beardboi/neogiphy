@@ -10,16 +10,18 @@ export default function SearchBar(props) {
     const { handleSubmit, text, keyword, handleInput } = props
 
     return (
-        <form onSubmit={handleSubmit} className="Input-Container">
-            <i className="fas fa-search" />
-            <input
-                type="text"
-                placeholder={text}
-                className="Search-Input"
-                value={keyword}
-                onChange={handleInput}
-            />
-            <button className="Search-Button">Search</button>
-        </form>
+        <div className="Search-Container">
+            <form onSubmit={handleSubmit} className="Input-Container">
+                <i className="fas fa-search" />
+                <input
+                    type="text"
+                    placeholder={text}
+                    className="Search-Input"
+                    value={keyword}
+                    onChange={handleInput}
+                />
+                <button className="Search-Button">Search</button>
+            </form>
+        </div>
     )
 }

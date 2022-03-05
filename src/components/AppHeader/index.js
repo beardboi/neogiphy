@@ -1,8 +1,9 @@
 import './styles.css'
 import { useLocation } from 'wouter'
 import { useState } from 'react/cjs/react.development'
-import logo from 'images/logo.png'
 import SearchBar from 'components/SearchBar'
+import Logo from 'components/Logo'
+import AppDescription from 'components/AppDescription'
 
 /**
  * The main component of the web page. It contains the web header
@@ -11,9 +12,6 @@ import SearchBar from 'components/SearchBar'
  */
 export default function AppHeader() {
     // Add some style to the formula.
-    const emojis = '💻😎👌'
-    const headerTitle = 'dank giphy'
-    const description = `A simple gif searcher write on React ${emojis}`
     const searchText = 'Search a gif by some keyword...'
 
     // Allows to manage the user web navigation.
@@ -42,25 +40,16 @@ export default function AppHeader() {
     }
 
     return (
-        <>
+        <div className="App-Header-Container">
             {/* App Header */}
-            <a href="/">
-                <div className="App-Header">
-                    <img className="Logo" src={logo} alt="Logo" />
-                    <h1>{headerTitle}</h1>
-                </div>
-            </a>
-            <div className="Sub-Title-Container">
-                <h3>{description}</h3>
-            </div>
-            <div className="Search-Container">
-                <SearchBar
-                    handleSubmit={handleSubmit}
-                    handleInput={handleInput}
-                    keyword={keyword}
-                    text={searchText}
-                />
-            </div>
-        </>
+            <Logo />
+            <AppDescription />
+            <SearchBar
+                handleSubmit={handleSubmit}
+                handleInput={handleInput}
+                keyword={keyword}
+                text={searchText}
+            />
+        </div>
     )
 }
