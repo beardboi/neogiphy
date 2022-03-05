@@ -1,0 +1,8 @@
+.Trending {
+    @apply text-white font-bold pr-2;
+}
+
+.Trending:hover {
+    color: var(--primary-color);
+    cursor: pointer;
+}

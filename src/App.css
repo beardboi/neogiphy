@@ -5,11 +5,17 @@
 /* Import Fonts  */
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&display=swap');
 
+:root {
+    --background-color: #282c34;
+    --primary-color: #a3457f;
+    --secondary-color: #27726e;
+}
+
 html,
 body {
     height: 100%;
     margin: 0;
-    background-color: #282c34;
+    background-color: var(--background-color);
 }
 
 .App-Content {

@@ -1,0 +1,3 @@
+.Trendings {
+    @apply flex flex-wrap justify-between;
+}

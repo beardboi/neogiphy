@@ -1,7 +1,7 @@
 import './styles.css'
 import { useLocation } from 'wouter'
 import { useState } from 'react/cjs/react.development'
-import logo from '.'
+import logo from 'images/logo.png'
 import SearchBar from 'components/SearchBar'
 
 /**
