@@ -1,13 +1,15 @@
 import { API_BASE_URL } from './config'
 
 // TODO: Later, make a function reusable
-export default async function getGifs({ keyword, limit = 25 }) {
+export default async function getGifs({ keyword, limit = 25, page = 0 }) {
     const baseURL = API_BASE_URL // Get the base URL.
     const resource = 'gifs'
     const action = 'search'
 
+    const offSet = limit * page
+
     // The final URL.
-    let apiURL = `${baseURL}/${resource}/${action}?api_key=${process.env.REACT_APP_API_KEY}&limit=${limit}&q=${keyword}`
+    let apiURL = `${baseURL}/${resource}/${action}?api_key=${process.env.REACT_APP_API_KEY}&limit=${limit}&q=${keyword}&offset=${offSet}`
 
     // Fetch the data.
     const res = await fetch(apiURL)

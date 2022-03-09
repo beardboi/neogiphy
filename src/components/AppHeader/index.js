@@ -1,13 +1,12 @@
 import './styles.css'
 import { useLocation } from 'wouter'
 import { useState } from 'react/cjs/react.development'
-import SearchBar from 'components/SearchBar'
-import Logo from 'components/Logo'
 import AppDescription from 'components/AppDescription'
+import Logo from 'components/Logo'
+import SearchBar from 'components/SearchBar'
 
 /**
- * The main component of the web page. It contains the web header
- * and the search input.
+ * The main component of the web page. It contains the header of 
  * @returns The Home component.
  */
 export default function AppHeader() {
@@ -26,6 +25,8 @@ export default function AppHeader() {
      * @param {*} event The click event.
      */
     const handleSubmit = (event) => {
+        // Prevent the default behaviour.
+        // Then redirect the user to the search based on the input keyword.
         event.preventDefault()
         pushLocation(`/search/${keyword}`)
     }
@@ -35,13 +36,13 @@ export default function AppHeader() {
      * @param {*} event The onChange event.
      */
     const handleInput = (event) => {
-        // Change the keyword by the text input value of the textbox.
+        // Change the keyword based on the input made by the user.
+        // It is call everything that the user change the input.
         setKeyword(event.target.value)
     }
 
     return (
         <div className="App-Header-Container">
-            {/* App Header */}
             <Logo />
             <AppDescription />
             <SearchBar

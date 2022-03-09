@@ -14,13 +14,13 @@ import Trendings from 'components/Trendings'
 function App() {
     return (
         <>
-            {/* APP HEADER */}
-                <AppHeader />
-
-            {/* APP CONTENT  */}
+            {/* App header */}
+            <AppHeader />
+            {/* App content */}
             <div className="App-Content">
                 <Trendings />
                 <GifsContextProvider>
+                    {/* The differents routes of the app.*/}
                     <Route component={LastSearch} path="/" />
                     <Route component={SearchResults} path="/search/:keyword" />
                     <Route component={Details} path="/gif/:id" />
