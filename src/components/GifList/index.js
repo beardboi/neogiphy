@@ -1,6 +1,6 @@
-import './styles.css'
-import Gif from '../Gif'
-import Masonry from 'react-masonry-css'
+import './styles.css';
+import Gif from '../Gif';
+import Masonry from 'react-masonry-css';
 
 /**
  * This component represents a wrapper to every single
@@ -14,9 +14,10 @@ import Masonry from 'react-masonry-css'
 export default function GifList({ gifs }) {
     const breakpointColumnsObj = {
         default: 3,
+        1300: 2,
         700: 2,
         500: 1,
-    }
+    };
 
     // Finally, return a Gif component for every gifs in the array.
     return (
@@ -29,5 +30,5 @@ export default function GifList({ gifs }) {
                 <Gif key={id} id={id} title={title} url={url} />
             ))}
         </Masonry>
-    )
+    );
 }

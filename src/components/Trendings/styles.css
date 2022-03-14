@@ -1,18 +1,17 @@
 .Trendings {
     @apply flex flex-wrap justify-between;
-    color: rgb(228, 228, 228);
 }
 
 .Trendings-Container {
-    
+    padding-left: 1em;
 }
 
 .Trending-Title {
-    display: flex;
-    justify-content: center;
+    margin-bottom: 0.75em;
 }
 
 .Trending-Title h2 {
     @apply font-bold;
-    color: rgb(228, 228, 228);
+    color: rgba(255, 255, 255, 0.842);
+    font-size: 20px;
 }

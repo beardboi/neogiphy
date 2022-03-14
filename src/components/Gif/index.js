@@ -14,8 +14,8 @@ export default function Gif(gif) {
     return (
         <div className="Gif">
             <Link to={`/gif/${id}`} className="Gif-Link">
-                { title.length === 0 ? '' : <h4>{title}</h4> }
-                <img loading='lazy' alt={title} src={url} />
+                {title.length === 0 ? '' : <h4>{title}</h4>}
+                <img loading="lazy" alt={title} src={url} />
             </Link>
         </div>
     );

@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+.Logo-Title {
+    font-weight: 600;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 50px;
+    color: rgba(252, 252, 252, 0.952);
+}
+
+.Neon {
+    animation: neonAnim 2s alternate-reverse infinite;
+}
+
+@keyframes neonAnim {
+    from {
+        text-shadow: 0 0 16px rgba(255, 31, 188, 0.7),
+            0 0 46px rgba(255, 31, 188, 0.7), 0 0 106px rgba(255, 31, 188, 0.7);
+    }
+    to {
+        text-shadow: 0 0 11px rgba(255, 31, 188, 0.7),
+            0 0 26px rgba(255, 31, 188, 0.7), 0 0 66px rgba(255, 31, 188, 0.7);
+    }
+}

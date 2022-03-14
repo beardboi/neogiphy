@@ -1,10 +1,12 @@
 export default function AppDescription() {
-    const emojis = '💻'
-    const description = `A simple gif searcher written on React ${emojis}`
+    const description = 'A simple gif searcher written on React ';
 
     return (
         <div className="Sub-Title-Container">
-            <h3>{description}</h3>
+            <h3>
+                {description}
+                <i className="fab fa-react"></i>
+            </h3>
         </div>
-    )
+    );
 }

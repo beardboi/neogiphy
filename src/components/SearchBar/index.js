@@ -1,4 +1,4 @@
-import './styles.css'
+import './styles.css';
 
 /**
  * The Search Bar that allows to change the keyword.
@@ -7,7 +7,7 @@ import './styles.css'
  */
 export default function SearchBar(props) {
     // Get the props by destructuring the props object.
-    const { handleSubmit, text, keyword, handleInput } = props
+    const { handleSubmit, text, keyword, handleInput } = props;
 
     return (
         <div className="Search-Container">
@@ -23,5 +23,5 @@ export default function SearchBar(props) {
                 <button className="Search-Button">Search</button>
             </form>
         </div>
-    )
+    );
 }

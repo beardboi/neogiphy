@@ -1,6 +1,6 @@
-import GifList from 'components/GifList'
-import Loader from 'components/Loader'
-import { useGifs } from 'hooks/useGifs'
+import GifList from 'components/GifList';
+import Loader from 'components/Loader';
+import { useGifs } from 'hooks/useGifs';
 
 /**
  * Contains the list of gifst that are made being received.
@@ -10,18 +10,18 @@ import { useGifs } from 'hooks/useGifs'
  */
 export default function SearchResults({ params }) {
     // Get the params from the path.
-    const { keyword } = params
+    const { keyword } = params;
 
     // Using custom hook.
-    const { loading, gifs, setPage } = useGifs({ keyword })
+    const { loading, gifs, setPage } = useGifs({ keyword });
 
     // Decode the string in the url to a normal string.
-    const keywordDecoded = decodeURI(keyword)
+    const keywordDecoded = decodeURI(keyword);
 
     // The function that allows to get the next page of gifs.
     const handleNextPage = () => {
-        setPage((prevPage) => prevPage + 1)
-    }
+        setPage((prevPage) => prevPage + 1);
+    };
 
     /* If the gifs are being setting, show the loader. 
        In the other case, a list of gifs will be rendered. TODO: Clean the code! */
@@ -30,21 +30,12 @@ export default function SearchResults({ params }) {
             {loading ? (
                 <Loader />
             ) : (
-                <>
-                    <h4 className="App-Title text-white justify-center">
-                        Your search results for "{keywordDecoded}":
-                    </h4>
+                <div>
                     <div className="Gifs-Container">
                         <GifList gifs={gifs} />
                     </div>
-                </>
+                </div>
             )}
-            <button
-                className="Search-Button text-white"
-                onClick={handleNextPage}
-            >
-                Get the next gifs
-            </button>
         </>
-    )
+    );
 }

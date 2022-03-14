@@ -1,26 +1,26 @@
-import { useEffect, useState } from 'react/cjs/react.production.min'
-import getTrendings from 'services/getTrendings'
+import { useEffect, useState } from 'react/cjs/react.production.min';
+import getTrendings from 'services/getTrendings';
 
 export default function useTrending() {
-    const [loading, setLoading] = useState(false)
-    const [trendings, setTrending] = useState([])
+    const [loading, setLoading] = useState(false);
+    const [trendings, setTrending] = useState([]);
 
     // The array with the trendings.
-    const { data } = getTrendings()
+    const { data } = getTrendings();
 
     useEffect(
         function () {
             // Show loader.
-            setLoading(true)
+            setLoading(true);
 
             // Get the trendings using a call to the API.
             getTrendings().then((trendings) => {
-                setTrending(trendings)
-                setLoading(false)
-            })
+                setTrending(trendings);
+                setLoading(false);
+            });
         },
         [setTrending]
-    )
+    );
 
-    return { data }
+    return { data };
 }

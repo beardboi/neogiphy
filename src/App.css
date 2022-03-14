@@ -6,9 +6,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&display=swap');
 
 :root {
+    /* Colors */
     --background-color: #282c34;
     --primary-color: #a3457f;
     --secondary-color: #27726e;
+    /* Distances */
+    --width-app-xl: 25%;
 }
 
 html,
@@ -19,26 +22,25 @@ body {
 }
 
 .App-Content {
-    /* display: grid;
-    grid-template-columns: 4fr 1fr; */
-    margin-left: 25%;
-    margin-right: 25%;
+    margin-left: var(--width-app-xl);
+    margin-right: var(--width-app-xl);
+    display: grid;
+    grid-template-columns: 4fr 1fr;
 }
 
 .App-Title {
-    font-size: 14px;
-    margin-right: 25%;
-    margin-left: 25%;
+    font-size: 13px;
+    margin-right: var(--width-app-xl);
+    margin-left: var(--width-app-xl);
     margin-top: 1rem;
     margin-bottom: 1rem;
     display: flex;
-    justify-content: center;
     font-family: 'Fira Code';
     text-align: center;
     @apply text-white;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
     .App-Content {
         margin-left: 5%;
         margin-right: 5%;
