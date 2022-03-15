@@ -4,6 +4,7 @@ import debounce from 'just-debounce-it';
 import GifList from 'components/GifList';
 import Loader from 'components/Loader';
 import useElementOnScreen from 'hooks/useElementOnScreen';
+import './styles.css';
 
 /**
  * Contains the list of gifst that are made being received.
@@ -19,11 +20,14 @@ export default function SearchResults({ params }) {
     const { loading, gifs, setPage } = useGifs({ keyword });
 
     // To get the visibility of the component.
-    const [elementRef, isVisible] = useElementOnScreen({
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.25,
-    }, false);
+    const [elementRef, isVisible] = useElementOnScreen(
+        {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.25,
+        },
+        false
+    );
 
     // The function that allows to get the next page of gifs.
     const handleNextPage = () => {
@@ -31,6 +35,7 @@ export default function SearchResults({ params }) {
         // console.log('Loading next page');
     };
 
+    // Debounce!
     const debounceHandleNextPage = () => debounce(handleNextPage(), 1000);
 
     useEffect(() => {
@@ -38,7 +43,7 @@ export default function SearchResults({ params }) {
     }, [isVisible]);
 
     /* If the gifs are being setting, show the loader. 
-       In the other case, a list of gifs will be rendered. TODO: Clean the code! */
+       In the other case, a list of gifs will be rendered.*/
     return (
         <>
             {loading ? (
@@ -48,7 +53,9 @@ export default function SearchResults({ params }) {
                     <div className="Gifs-Container">
                         <GifList gifs={gifs} />
                     </div>
-                    <div ref={elementRef} className="">Load more gifs</div>
+                    <div ref={elementRef} className="Visor">
+                        <Loader />
+                    </div>
                 </>
             )}
         </>

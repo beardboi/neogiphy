@@ -13,8 +13,8 @@ import Masonry from 'react-masonry-css';
  */
 export default function GifList({ gifs }) {
     const breakpointColumnsObj = {
-        default: 3,
-        1300: 2,
+        default: 4,
+        1100: 3,
         700: 2,
         500: 1,
     };
