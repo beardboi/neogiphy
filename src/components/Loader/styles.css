@@ -10,10 +10,11 @@
 .Loader-Container {
     margin-left: 25%;
     margin-right: 25%;
-    height: 20vh;
+    padding-top: 25%;
+    min-height: 80vh;
     display: flex;
-    align-items: center;
     justify-content: center;
+
 }
 
 @keyframes spin {

@@ -25,13 +25,13 @@ body {
     margin-left: var(--width-app-xl);
     margin-right: var(--width-app-xl);
     display: grid;
-    grid-template-columns: 4fr 1fr;
+    /* grid-template-columns: 4fr 1fr; */
 }
 
 .App-Title {
     font-size: 13px;
-    margin-right: var(--width-app-xl);
-    margin-left: var(--width-app-xl);
+    /* margin-right: var(--width-app-xl);
+    margin-left: var(--width-app-xl); */
     margin-top: 1rem;
     margin-bottom: 1rem;
     display: flex;

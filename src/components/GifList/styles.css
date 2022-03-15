@@ -9,6 +9,7 @@
 
 .Gifs-Container_Column {
     background-clip: padding-box;
+    min-height: 80vh;
 }
 
 .Gifs-Container_Column > .Gif {
