@@ -29,7 +29,7 @@ export function useGifs({ keyword } = { keyword: null }) {
     /* Every time that the component is render, calls
        an API from GIPHY specifying the new keyword.*/
     useEffect(
-        function () {
+        () => {
             // Show loader.
             setLoading(true);
 
@@ -39,6 +39,10 @@ export function useGifs({ keyword } = { keyword: null }) {
                 setLoading(false);
                 localStorage.setItem('lastKeyword', keywordToUse);
             });
+
+            return () => {
+                setLoading(false);
+            }
         },
         [keyword, keywordToUse, setGifs] // Keyword is a dependecy value. // eslint-disable-line react-hooks/exhaustive-deps
     );

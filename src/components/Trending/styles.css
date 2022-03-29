@@ -1,7 +1,17 @@
 .Trending {
     @apply font-bold pr-2;
     color: rgba(240, 248, 255, 0.774);
-    font-size: 16px;
+    font-size: 17px;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: 0.1em;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    padding-right: 0.5em;
+    padding-left: 0.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .Trending:hover {

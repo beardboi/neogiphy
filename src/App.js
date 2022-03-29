@@ -1,10 +1,14 @@
+import React from 'react';
 import './App.css';
 import { Route } from 'wouter';
 import AppHeader from 'components/AppHeader';
-import SearchResults from 'pages/Search';
-import Details from 'pages/Details';
-import LastSearch from 'components/LastSearch';
 import { GifsContextProvider } from 'context/GifsContext';
+import { Suspense } from 'react';
+import Trendings from 'components/Trendings';
+
+const LastSearch = React.lazy(() => import('components/LastSearch'));
+const SearchResults = React.lazy(() => import('pages/Search'));
+const Details = React.lazy(() => import('pages/Details'));
 
 /**
  * The principal component. It contains all the routes from the app.
@@ -12,20 +16,27 @@ import { GifsContextProvider } from 'context/GifsContext';
  */
 function App() {
     return (
-        <>
+        <Suspense fallback={null}>
             {/* App header */}
             <AppHeader />
             {/* App content */}
             <div className="App-Content">
-                <GifsContextProvider>
-                    {/* The differents routes of the app.*/}
-                    <Route component={LastSearch} path="/" />
-                    <Route component={SearchResults} path="/search/:keyword" />
-                    <Route component={Details} path="/gif/:id" />
-                </GifsContextProvider>
-                {/* <Trendings /> */}
+                <div>
+                    <GifsContextProvider>
+                        {/* The differents routes of the app.*/}
+                        <Route component={LastSearch} path="/" />
+                        <Route
+                            component={SearchResults}
+                            path="/search/:keyword"
+                        />
+                        <Route component={Details} path="/gif/:id" />
+                    </GifsContextProvider>
+                </div>
+                <div>
+                    <Trendings />
+                </div>
             </div>
-        </>
+        </Suspense>
     );
 }
 export default App;

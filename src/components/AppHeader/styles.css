@@ -21,8 +21,8 @@
 
 .App-Header-Container {
     background-color: #202020;
-    margin-right: 25%;
-    margin-left: 25%;
+    margin-right: var(--width-app-xl);
+    margin-left: var(--width-app-xl);
     display: flex;
     color: rgb(224, 224, 224);
     border-bottom-left-radius: 0.5rem;

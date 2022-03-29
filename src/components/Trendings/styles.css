@@ -1,5 +1,6 @@
 .Trendings {
-    @apply flex flex-wrap justify-between;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .Trendings-Container {
@@ -7,11 +8,17 @@
 }
 
 .Trending-Title {
-    margin-bottom: 0.75em;
+    min-height: 3rem;
+    display: flex;
+    align-items: center;
 }
 
 .Trending-Title h2 {
-    @apply font-bold;
-    color: rgba(255, 255, 255, 0.842);
+    color: rgba(255, 255, 255, 0.8);
     font-size: 20px;
+    font-weight: bold;
+}
+
+.Trendings > :nth-child(2n + 1) {
+    color: var(--primary-color);
 }

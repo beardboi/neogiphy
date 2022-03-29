@@ -6,22 +6,34 @@ import './styles.css';
 
 /**
  * The component that shows the last search made by the user.
- * @returns The LastSearchComponent.
+ * @returns The Home Component.
  */
-export default function LastSearch() {
+export default function Homepage() {
     // Using the custom hook... get the loading state and the gifs array.
     const { loading, gifs } = useGifs();
 
     // Get the last keyword info and fix the format string.
-    const keyword = decodeURI(getLastKeyword());
+    const searchKeyword = decodeURI(getLastKeyword());
 
-    if (loading) return <Loader />;
+    const title = 'Your last search was for ';
 
     return (
-        <div>
-            <div className="Gifs-Container">
-                <GifList gifs={gifs} />
-            </div>
-        </div>
+        <>
+            {loading ? (
+                <Loader />
+            ) : (
+                <>
+                    <div className="App-Content-Title">
+                        <h4>
+                            {title}
+                            <b>{searchKeyword}</b>
+                        </h4>
+                    </div>
+                    <div className="Gifs-Container">
+                        <GifList gifs={gifs} />
+                    </div>
+                </>
+            )}
+        </>
     );
 }

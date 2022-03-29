@@ -8,13 +8,18 @@ import './styles.css';
 
 /**
  * Contains the list of gifst that are made being received.
- * @param {*} params The params passed by the father component.
+ * @param {*} params The params passed by URL.
  * It contains the keyword needed to search the gifs.
  * @returns The search results component.
  */
 export default function SearchResults({ params }) {
     // Get the params from the path.
     const { keyword } = params;
+
+    // The keyword that is showed on the title.
+    const searchKeyword = decodeURI(keyword);
+
+    const title = 'Search results for '
 
     // Using custom hook.
     const { loading, gifs, setPage } = useGifs({ keyword });
@@ -50,6 +55,12 @@ export default function SearchResults({ params }) {
                 <Loader />
             ) : (
                 <>
+                    <div className="App-Content-Title">
+                        <h4>
+                            {title}
+                            <b>{searchKeyword}</b>:
+                        </h4>
+                    </div>
                     <div className="Gifs-Container">
                         <GifList gifs={gifs} />
                     </div>

@@ -1,3 +1,14 @@
-.Search-Subtitle {
+.App-Content-Title {
     min-height: 3em;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
+
+.App-Content-Title h4 {
+    font-size: 14px;
+    color: rgba(240, 248, 255, 0.774);
+    font-family: 'Fira Code', monospace;
+    margin-left: 0.5em;
+}
+

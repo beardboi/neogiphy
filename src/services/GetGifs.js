@@ -1,22 +1,15 @@
 import { API_BASE_URL } from './config';
 
-// TODO: Later, make a function reusable
-export default async function getGifs({ keyword, limit = 25, page = 0 }) {
-    const baseURL = API_BASE_URL; // Get the base URL.
-    const resource = 'gifs';
-    const action = 'search';
-
-    const offSet = limit * page;
-
-    // The final URL.
-    let apiURL = `${baseURL}/${resource}/${action}?api_key=${process.env.REACT_APP_API_KEY}&limit=${limit}&q=${keyword}&offset=${offSet}`;
-
-    // Fetch the data.
-    const res = await fetch(apiURL);
-
-    // Get the data.
-    const response = await res.json();
+/**
+ * This function takes the data obtained from the call to the API and process it
+ * to finally return an array with the gif's content data.
+ * @param {*} response The response from the call to an API.
+ * @returns The array with the response data.
+ */
+const processData = (response) => {
     const { data } = response;
+
+    console.log(data);
 
     // Validation: data needs to be an array (that contains the gifs).
     if (Array.isArray(data)) {
@@ -34,4 +27,24 @@ export default async function getGifs({ keyword, limit = 25, page = 0 }) {
     }
 
     return []; // Default return value
+};
+
+/**
+ *
+ * @param {*} param0
+ */
+export default async function getGifs({ keyword, limit = 25, page = 0 }) {
+    const baseURL = API_BASE_URL; // Get the base URL.
+    const offSet = limit * page; // How many results skip (helps to paginate the data).
+
+    // The final URL.
+    let apiURL = `${baseURL}/gifs/search?api_key=${process.env.REACT_APP_API_KEY}&limit=${limit}&q=${keyword}&offset=${offSet}`;
+
+    // Fetch the data.
+    const res = await fetch(apiURL);
+
+    // Get the data.
+    const response = await res.json();
+
+    return processData(response);
 }

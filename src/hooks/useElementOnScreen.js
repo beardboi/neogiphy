@@ -13,7 +13,6 @@ export default function useElementOnScreen(options, once = true) {
     // Define the callback function.
     const callBackFunction = (entries, observer) => {
         const [entry] = entries; // Get the entry.
-        console.log(entry);
         if (entry.isIntersecting) {
             setIsVisible(true);
             once && observer.disconnect();

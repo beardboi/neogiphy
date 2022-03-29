@@ -21,14 +21,16 @@ export default function GifList({ gifs }) {
 
     // Finally, return a Gif component for every gifs in the array.
     return (
-        <Masonry
-            breakpointCols={breakpointColumnsObj}
-            className="Gifs-Container"
-            columnClassName="Gifs-Container_Column"
-        >
-            {gifs.map(({ id, title, url }) => (
-                <Gif key={id} id={id} title={title} url={url} />
-            ))}
-        </Masonry>
+        <>
+            <Masonry
+                breakpointCols={breakpointColumnsObj}
+                className="Gifs-Container"
+                columnClassName="Gifs-Container_Column"
+            >
+                {gifs.map(({ id, title, url }) => (
+                    <Gif key={id} id={id} title={title} url={url} />
+                ))}
+            </Masonry>
+        </>
     );
 }
