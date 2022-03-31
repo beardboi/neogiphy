@@ -1,4 +1,5 @@
-export default function AppDescription() {
+
+const AppDescription = () => {
     const description = 'A simple gif searcher written on React ';
 
     return (
@@ -10,3 +11,5 @@ export default function AppDescription() {
         </div>
     );
 }
+
+export default AppDescription;

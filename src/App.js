@@ -1,9 +1,9 @@
-import React from 'react';
 import './App.css';
-import { Route } from 'wouter';
-import AppHeader from 'components/AppHeader';
 import { GifsContextProvider } from 'context/GifsContext';
+import { Route } from 'wouter';
 import { Suspense } from 'react';
+import AppHeader from 'components/AppHeader';
+import React from 'react';
 import Trendings from 'components/Trendings';
 
 const LastSearch = React.lazy(() => import('components/LastSearch'));

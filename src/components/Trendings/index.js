@@ -11,7 +11,6 @@ export default function Trendings() {
 
     useEffect(function () {
         getTrendings().then((trendings) => {
-            console.log(trendings);
             setTrends(trendings);
         });
     }, []);

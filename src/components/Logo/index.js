@@ -1,6 +1,7 @@
 import './styles.css';
+import React from 'react'
 
-export default function Logo() {
+const Logo = () => {
     const headerTitle = 'Neogiphy';
 
     return (
@@ -11,3 +12,5 @@ export default function Logo() {
         </a>
     );
 }
+
+export default React.memo(Logo);

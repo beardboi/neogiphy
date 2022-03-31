@@ -9,8 +9,6 @@ import { API_BASE_URL } from './config';
 const processData = (response) => {
     const { data } = response;
 
-    console.log(data);
-
     // Validation: data needs to be an array (that contains the gifs).
     if (Array.isArray(data)) {
         // For every gif in the data array.

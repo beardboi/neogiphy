@@ -7,9 +7,11 @@
 
 :root {
     /* Colors */
-    --background-color: #282c34;
+    /* --background-color: #282c34; */
+    --background-color: #131313;
     --primary-color: #a3457f;
     --secondary-color: #27726e;
+    --background-color-secondary: #202020;
     /* Distances */
     --width-app-xl: 20%;
 }

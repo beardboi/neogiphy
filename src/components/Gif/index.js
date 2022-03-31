@@ -7,7 +7,7 @@ import { Link } from 'wouter';
  * @param {*} gif The gif object.
  * @returns A single Gif component.
  */
-export default function Gif(gif) {
+const Gif = (gif) => {
     // Destructuring the gif into some variables.
     const { title, url, id } = gif;
 
@@ -19,4 +19,17 @@ export default function Gif(gif) {
             </Link>
         </div>
     );
-}
+};
+
+/**
+ * This function allows to compare the id of every gifs to make
+ * React use React.memo()
+ * @param {*} prevProps The previous props of the component.
+ * @param {*} nextProps The next props of the component.
+ * @returns 
+ */
+const compareId = (prevProps, nextProps) => {
+    return prevProps.id === nextProps.id;
+};
+
+export default React.memo(Gif, compareId);

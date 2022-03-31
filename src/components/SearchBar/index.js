@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import './styles.css';
 
 /**
@@ -6,7 +6,7 @@ import './styles.css';
  * @param {*} props The properties passed by the father component.
  * @returns The SearchBar Component.
  */
-export default function SearchBar({ onSubmit }) {
+const SearchBar = ({ onSubmit }) => {
     const text = 'Search a gif by some keyword...';
 
     // Handles the gifs keyword state.
@@ -50,3 +50,5 @@ export default function SearchBar({ onSubmit }) {
         </div>
     );
 }
+
+export default React.memo(SearchBar);
