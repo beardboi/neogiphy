@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react/cjs/react.production.min';
+import { useEffect, useState } from 'react';
 import getTrendings from 'services/getTrendings';
 
 export default function useTrending() {

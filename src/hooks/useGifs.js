@@ -1,7 +1,7 @@
 import { useState, useEffect, useContext } from 'react';
-import getGifs from '../services/getGifs';
-import { getLastKeyword } from '../utils/getLastKeyword';
-import GifsContext from '../context/GifsContext';
+import getGifs from 'services/getGifs';
+import { getLastKeyword } from 'utils/getLastKeyword';
+import GifsContext from 'context/GifsContext';
 
 const INITIAL_PAGE = 0;
 
