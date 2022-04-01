@@ -1,3 +1,4 @@
+import React from 'react';
 
 const AppDescription = () => {
     const description = 'A simple gif searcher written on React ';
@@ -10,6 +11,6 @@ const AppDescription = () => {
             </h3>
         </div>
     );
-}
+};
 
-export default AppDescription;
+export default React.memo(AppDescription);

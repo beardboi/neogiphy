@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&display=swap');
+
 /* Container for SearchResult Component */
 .Search-Container {
     display: flex;
@@ -13,8 +15,7 @@
     width: 100%;
     align-items: center;
     justify-content: center;
-    padding: 1.75rem;
-    font-family: 'Fira Code', monospace;
+    padding: 1rem;
     margin-right: 5%;
     margin-left: 5%;
 }
@@ -30,9 +31,10 @@
     border-radius: 0.175rem;
     padding-right: 0.5rem;
     padding-left: 0.5rem;
-    font-size: 12px;
-    font-weight: 800;
+    font-size: 13px;
+    font-weight: 500;
     color: #dadada;
+    font-family: 'Fira Mono', monospace;
 }
 
 .Search-Button {
@@ -43,6 +45,7 @@
     height: 36px;
     padding-left: 2rem;
     padding-right: 2rem;
+    font-family: 'Fira Mono', monospace;
 }
 
 .Search-Button:hover {
@@ -87,5 +90,21 @@ button[type='text']:hover {
         padding-right: 0.75rem;
         padding-top: 1.2rem;
         padding-bottom: 0.75rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .Search-Container {
+        display: flex;
+        width: 100%;
+        padding-left: 0.1rem;
+        padding-right: 0.1rem;
+        padding-top: 1rem;
+        padding-bottom: 0.45rem;
+    }
+
+    .Input-Container {
+        margin-right: 1%;
+        margin-left: 1%;
     }
 }

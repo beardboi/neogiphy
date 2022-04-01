@@ -16,7 +16,8 @@
     padding-right: 0.4rem;
     min-height: 80px;
     border-radius: 30%;
-    @apply flex flex-row;
+    display: flex;
+    flex-direction: row;
 }
 
 .App-Header-Container {
@@ -35,9 +36,10 @@
 }
 
 .Sub-Title-Container {
-    font-family: 'Fira Code', monospace;
+    font-family: 'Fira Mono', monospace;
     font-size: 14px;
     text-align: center;
+    font-weight: 400;
 }
 
 @media screen and (max-width: 879px) {

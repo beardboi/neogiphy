@@ -21,3 +21,10 @@
             0 0 26px rgba(255, 31, 188, 0.7), 0 0 66px rgba(255, 31, 188, 0.7);
     }
 }
+
+@media screen and (max-width: 420px) {
+    .Logo-Title {
+        font-size: 35px;
+        transition: 1s;
+    }
+}

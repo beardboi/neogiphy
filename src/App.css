@@ -39,10 +39,12 @@ body {
     text-align: center;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
     .App-Content {
         margin-left: 5%;
         margin-right: 5%;
+        display: flex;
+        flex-direction: column;
     }
 
     .App-Title {
