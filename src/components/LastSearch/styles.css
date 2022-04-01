@@ -6,9 +6,12 @@
 }
 
 .App-Content-Title h4 {
-    font-size: 14px;
-    color: rgba(240, 248, 255, 0.774);
-    font-family: 'Fira Code', monospace;
-    margin-left: 0.5em;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Segoe UI';
 }
 
+h4 > b {
+    color: var(--primary-color);
+}
